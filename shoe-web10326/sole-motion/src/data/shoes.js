@@ -99,4 +99,4 @@ export const shoeFilters = [
   ];
   
   export const formatPrice = (pkr) =>
-  `Rs. ${pkr.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+  `Rs. ${pkr.tString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
