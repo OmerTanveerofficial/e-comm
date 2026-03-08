@@ -31,7 +31,7 @@ const Navbar = ({ onSearch }) => {
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-600 text-white text-sm font-bold">
             ES
           </span>
-          <span className="hidden sm:inline-block">E-Store</span>
+          <span className="hidden sm:inline-block">Omers E-Store</span>
         </Link>
 
         {/* Search */}
