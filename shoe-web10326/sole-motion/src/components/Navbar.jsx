@@ -84,7 +84,7 @@ const Navbar = () => {
             className="inline-flex h-9 w-9 items-center justify-center rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-800/70 text-slate-600 dark:text-slate-200 shadow-sm hover:border-indigo-500 hover:text-indigo-500 transition"
             aria-label="Toggle theme"
           >
-            {theme === 'light' ? '🌙' : '☀️'}
+            {theme === 'light' ? '' : '☀️'}
           </button>
         </div>
       </nav>
