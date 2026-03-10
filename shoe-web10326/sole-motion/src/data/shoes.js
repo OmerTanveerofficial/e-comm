@@ -17,7 +17,7 @@ export const shoeFilters = [
       price: 11999,
       tag: 'New Arrival',
       category: 'Running',
-      gender: 'Men',
+      gender: 'Man',
       image:
         'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
