@@ -76,7 +76,7 @@ const Navbar = () => {
             className="hidden sm:inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50/70 dark:bg-slate-800/60 px-3 py-1.5 text-xs text-slate-700 dark:text-slate-200 hover:border-indigo-500 hover:text-indigo-500"
           >
             <span className="text-sm">🛒</span>
-            <span>View colection</span>
+            <span>View colllection</span>
           </button>
           <button
             type="button"
