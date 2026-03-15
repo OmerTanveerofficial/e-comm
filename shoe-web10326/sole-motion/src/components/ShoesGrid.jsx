@@ -13,7 +13,7 @@ const ShoesGrid = ({ shoes }) => {
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {shoes.map((shoe, idx) => (
+        {shoes.map((soe, idx) => (
           <ProductCard key={shoe.id} shoe={shoe} index={idx} />
         ))}
       </div>
