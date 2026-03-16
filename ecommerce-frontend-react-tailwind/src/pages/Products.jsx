@@ -36,22 +36,19 @@ const Products = ({ searchQuery }) => {
   }, [category, searchQuery, sortBy]);
 
   return (
-    <main className="container-main pb-10 mt-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <h1 className="text-xl sm:text-2xl font-semibold text-slate-900 dark:text-slate-100">
-            All products
+    <main className="container-main pb-14 mt-8">
+      <div className="mb-8">
+        <p className="text-[11px] uppercase tracking-[0.25em] text-amber-600 font-semibold mb-1">
+          {products.length} product{products.length !== 1 ? 's' : ''}
+        </p>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <h1 className="font-serif font-bold text-2xl sm:text-3xl text-zinc-900 dark:text-zinc-50">
+            {category === 'All' ? 'All Products' : category}
           </h1>
-          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-            Browse our full catalog of curated items.
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-3 items-center">
-          <CategoryFilter active={category} onChange={setCategory} />
           <select
             value={sortBy}
             onChange={e => setSortBy(e.target.value)}
-            className="mt-2 sm:mt-0 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-2 py-1 text-xs text-slate-700 dark:text-slate-100"
+            className="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 px-3 py-2 text-sm text-zinc-700 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-amber-400 transition self-start sm:self-auto"
           >
             <option value="relevance">Sort: Relevance</option>
             <option value="price-asc">Price: Low → High</option>
@@ -59,6 +56,10 @@ const Products = ({ searchQuery }) => {
             <option value="rating-desc">Rating: High → Low</option>
           </select>
         </div>
+        <div className="mt-5">
+          <CategoryFilter active={category} onChange={setCategory} />
+        </div>
+        <div className="mt-5 h-px bg-zinc-100 dark:bg-zinc-800" />
       </div>
 
       <ProductGrid products={products} />
