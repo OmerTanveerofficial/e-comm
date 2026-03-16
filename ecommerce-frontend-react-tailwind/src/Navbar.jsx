@@ -15,31 +15,38 @@ const Navbar = ({ onSearch }) => {
     navigate('/products');
   };
 
-  const activeClass =
-    'text-indigo-600 dark:text-indigo-400 font-semibold';
   const baseLink =
-    'text-sm text-slate-600 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition';
+    'text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150';
+  const activeClass = 'text-zinc-900 dark:text-zinc-100 font-semibold border-b-2 border-amber-500 pb-0.5';
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur">
-      <nav className="container-main flex items-center justify-between py-3 gap-3">
+    <header className="sticky top-0 z-40 bg-white dark:bg-zinc-950 border-b border-zinc-100 dark:border-zinc-800">
+      {/* Trust strip */}
+      <div className="bg-zinc-900 dark:bg-zinc-950 text-zinc-300 text-[11px] text-center py-2 tracking-widest uppercase font-medium">
+        Free shipping on orders over $50 &nbsp;·&nbsp; 30-day returns &nbsp;·&nbsp; Secure checkout
+      </div>
+
+      <nav className="container-main flex items-center justify-between py-4 gap-4">
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-2 text-lg font-bold tracking-tight text-slate-900 dark:text-slate-50"
+          className="flex items-center gap-3 shrink-0"
         >
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-600 text-white text-sm font-bold">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-xs font-bold tracking-wide">
             ES
           </span>
-          <span className="hidden sm:inline-block">Omers E-Store</span>
+          <span className="hidden sm:block font-serif font-bold text-xl tracking-tight text-zinc-900 dark:text-zinc-50">
+            Omers E-Store
+          </span>
         </Link>
 
         {/* Search */}
         <form
           onSubmit={handleSubmit}
-          className="flex-1 max-w-md hidden sm:flex items-center"
+          className="flex-1 max-w-sm hidden sm:flex items-center"
         >
           <div className="relative w-full">
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 text-sm">🔍</span>
             <input
               type="text"
               placeholder="Search products..."
@@ -48,41 +55,38 @@ const Navbar = ({ onSearch }) => {
                 setSearchValue(e.target.value);
                 onSearch(e.target.value);
               }}
-              className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-4 py-2 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full rounded-full border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900 pl-9 pr-4 py-2 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
             />
           </div>
         </form>
 
-        {/* Right side */}
-        <div className="flex items-center gap-3">
-          {/* Mobile search icon (just opens /products) */}
+        {/* Right actions */}
+        <div className="flex items-center gap-2">
           <button
             type="button"
             onClick={() => navigate('/products')}
-            className="sm:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-300"
+            className="sm:hidden inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-700 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition"
             aria-label="Search"
           >
             🔍
           </button>
 
-          {/* Theme toggle */}
           <button
             type="button"
             onClick={toggleTheme}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-300"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-700 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition"
             aria-label="Toggle theme"
           >
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
 
-          {/* Cart */}
           <Link
             to="/cart"
-            className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-200"
+            className="relative inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-100 transition"
           >
             🛒
             {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 inline-flex h-4 min-w-[1rem] items-center justify-center rounded-full bg-indigo-600 text-[10px] font-semibold text-white px-1">
+              <span className="absolute -top-1 -right-1 inline-flex h-4 min-w-[1rem] items-center justify-center rounded-full bg-amber-500 text-[10px] font-bold text-white px-1">
                 {totalItems}
               </span>
             )}
@@ -91,8 +95,8 @@ const Navbar = ({ onSearch }) => {
       </nav>
 
       {/* Secondary nav */}
-      <div className="border-t border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80">
-        <div className="container-main flex gap-4 py-2 text-xs sm:text-sm overflow-x-auto">
+      <div className="border-t border-zinc-100 dark:border-zinc-800">
+        <div className="container-main flex gap-6 py-2.5 overflow-x-auto">
           <NavLink
             to="/"
             className={({ isActive }) =>

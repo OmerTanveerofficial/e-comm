@@ -7,7 +7,7 @@
 }
 
 body {
-  @apply font-sans text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-900;
+  @apply font-sans text-zinc-900 dark:text-zinc-100 bg-white dark:bg-zinc-950;
 }
 
 /* Custom container utility */
@@ -15,7 +15,12 @@ body {
   @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-/* Simple card shadow */
+/* Premium card */
 .card {
-  @apply rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm;
+  @apply rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-card;
+}
+
+/* Heading serif */
+.heading {
+  @apply font-serif font-bold tracking-tight;
 }

@@ -9,14 +9,16 @@ const Home = () => {
   return (
     <main className="container-main pb-10">
       <Hero />
-      <section id="featured" className="mt-10">
-        <div className="flex items-center justify-between gap-2">
-          <h2 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-slate-100">
-            Featured products
-          </h2>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
-            Handpicked by our editors
-          </p>
+      <section id="featured" className="mt-14">
+        <div className="flex items-end justify-between gap-2 mb-6">
+          <div>
+            <p className="text-[11px] uppercase tracking-[0.25em] text-amber-600 font-semibold mb-1">
+              Handpicked by our editors
+            </p>
+            <h2 className="font-serif font-bold text-2xl sm:text-3xl text-zinc-900 dark:text-zinc-50">
+              Featured Products
+            </h2>
+          </div>
         </div>
         <ProductGrid products={featured} />
       </section>

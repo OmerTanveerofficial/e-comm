@@ -4,7 +4,7 @@ import ProductCard from '../ProductCard.jsx';
 const ProductGrid = ({ products }) => {
   if (!products.length) {
     return (
-      <p className="mt-6 text-sm text-slate-500 dark:text-slate-400">
+      <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-400">
         No products found. Try a different filter or search term.
       </p>
     );
