@@ -10,7 +10,7 @@ const Home = () => {
     <main className="container-main pb-10">
       <Hero />
       <section id="featured" className="mt-14">
-        <div className="flex items-end justify-between gap-2 mb-6">
+        <div className="flex items-end justify-between gap-2 mb-6 animate-fade-up delay-100">
           <div>
             <p className="text-[11px] uppercase tracking-[0.25em] text-amber-600 font-semibold mb-1">
               Handpicked by our editors

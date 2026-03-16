@@ -186,7 +186,7 @@ const Navbar = ({ onSearch }) => {
 
             {shopOpen && (
               <div
-                className="absolute top-full left-0 mt-1 w-56 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-card-hover z-50 p-2"
+                className="animate-slide-down absolute top-full left-0 mt-1 w-56 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-card-hover z-50 p-2"
                 onMouseEnter={openShop}
                 onMouseLeave={closeShop}
               >
@@ -267,7 +267,7 @@ const Navbar = ({ onSearch }) => {
 
       {/* ─── Mobile drawer ─── */}
       {mobileOpen && (
-        <div className="sm:hidden border-b border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 pb-4">
+        <div className="animate-slide-down sm:hidden border-b border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 pb-4">
           {/* Mobile search */}
           <form onSubmit={handleSubmit} className="mt-3 mb-4">
             <input

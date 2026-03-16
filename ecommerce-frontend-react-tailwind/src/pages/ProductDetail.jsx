@@ -21,14 +21,14 @@ const ProductDetail = () => {
   return (
     <main className="container-main py-14">
       <div className="grid gap-10 md:grid-cols-2 items-start">
-        <div className="overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-card bg-zinc-100 dark:bg-zinc-800">
+        <div className="animate-fade-up delay-0 overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-card bg-zinc-100 dark:bg-zinc-800">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
           />
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="animate-fade-up delay-150 flex flex-col gap-5">
           <div>
             <p className="text-[11px] uppercase tracking-widest text-amber-600 font-semibold mb-2">
               {product.category}

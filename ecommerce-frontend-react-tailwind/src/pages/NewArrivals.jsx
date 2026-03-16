@@ -9,10 +9,10 @@ const NewArrivals = () => {
     <main className="container-main pb-14">
       {/* Header */}
       <div className="mt-10 mb-10">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-amber-600 font-semibold mb-3">
+        <p className="animate-fade-up delay-0 text-[11px] uppercase tracking-[0.3em] text-amber-600 font-semibold mb-3">
           Just dropped
         </p>
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div className="animate-fade-up delay-100 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <h1 className="font-serif font-bold text-3xl sm:text-4xl text-zinc-900 dark:text-zinc-50 leading-tight">
             New Arrivals
           </h1>
@@ -20,7 +20,7 @@ const NewArrivals = () => {
             The latest additions to our collection — fresh styles and must-have products.
           </p>
         </div>
-        <div className="mt-6 h-px bg-gradient-to-r from-amber-400 via-zinc-300 to-transparent dark:via-zinc-700" />
+        <div className="animate-fade-in delay-200 mt-6 h-px bg-gradient-to-r from-amber-400 via-zinc-300 to-transparent dark:via-zinc-700" />
       </div>
 
       {/* Grid */}

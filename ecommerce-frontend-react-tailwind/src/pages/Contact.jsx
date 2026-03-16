@@ -4,7 +4,7 @@ const Contact = () => (
   <main className="container-main py-14">
     <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr,1.6fr] gap-12 items-start">
       {/* Left info */}
-      <div>
+      <div className="animate-fade-up delay-0">
         <p className="text-[11px] uppercase tracking-[0.3em] text-amber-600 font-semibold mb-3">
           Get in touch
         </p>
@@ -32,7 +32,7 @@ const Contact = () => (
       </div>
 
       {/* Right form */}
-      <form className="card p-6 sm:p-8 space-y-5">
+      <form className="animate-fade-up delay-150 card p-6 sm:p-8 space-y-5">
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1.5">

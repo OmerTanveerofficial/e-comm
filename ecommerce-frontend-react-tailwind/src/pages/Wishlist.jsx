@@ -10,7 +10,7 @@ const Wishlist = () => {
   if (!wishlist.length) {
     return (
       <main className="container-main py-20 flex flex-col items-center text-center">
-        <div className="w-20 h-20 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-4xl mb-6">
+        <div className="animate-float w-20 h-20 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-4xl mb-6">
           ♡
         </div>
         <h1 className="font-serif font-bold text-2xl text-zinc-900 dark:text-zinc-100 mb-2">

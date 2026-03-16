@@ -105,7 +105,7 @@ const Cart = () => {
           <button
             type="button"
             onClick={() => navigate('/checkout')}
-            className="mt-5 w-full inline-flex items-center justify-center rounded-xl bg-zinc-900 dark:bg-zinc-100 px-4 py-3 text-sm font-semibold text-white dark:text-zinc-900 hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors"
+            className="mt-5 w-full inline-flex items-center justify-center rounded-xl bg-zinc-900 dark:bg-zinc-100 px-4 py-3 text-sm font-semibold text-white dark:text-zinc-900 hover:bg-zinc-700 dark:hover:bg-zinc-200 active:scale-95 transition-all duration-150"
           >
             Proceed to checkout
           </button>

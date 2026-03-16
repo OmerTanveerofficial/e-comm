@@ -10,17 +10,113 @@ body {
   @apply font-sans text-zinc-900 dark:text-zinc-100 bg-white dark:bg-zinc-950;
 }
 
-/* Custom container utility */
 .container-main {
   @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-/* Premium card */
 .card {
   @apply rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-card;
 }
 
-/* Heading serif */
 .heading {
   @apply font-serif font-bold tracking-tight;
+}
+
+/* ─────────────────────────────────────────
+   KEYFRAMES
+───────────────────────────────────────── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)     scale(1);    }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400% 0; }
+  100% { background-position:  400% 0; }
+}
+
+@keyframes pulseBadge {
+  0%, 100% { transform: scale(1);    box-shadow: 0 0 0 0   rgba(245,158,11,.4); }
+  50%       { transform: scale(1.04); box-shadow: 0 0 0 6px rgba(245,158,11,0);  }
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to   { width: 60%; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes marqueeLTR {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ─────────────────────────────────────────
+   ANIMATION UTILITY CLASSES
+───────────────────────────────────────── */
+
+.animate-fade-up   { animation: fadeUp   0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-fade-in   { animation: fadeIn   0.5s ease-out both; }
+.animate-slide-down{ animation: slideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-scale-in  { animation: scaleIn  0.28s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-float     { animation: floatY   3.6s ease-in-out infinite; }
+.animate-pulse-badge { animation: pulseBadge 2s ease-in-out infinite; }
+.animate-marquee   { animation: marqueeLTR 22s linear infinite; }
+
+/* Stagger helpers */
+.delay-0   { animation-delay: 0ms;   }
+.delay-75  { animation-delay: 75ms;  }
+.delay-100 { animation-delay: 100ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-250 { animation-delay: 250ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* Progress bar fill animation */
+.animate-progress-fill {
+  animation: progressFill 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+/* Count-up stagger */
+.animate-count-up { animation: countUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Shimmer loading effect */
+.shimmer {
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.12) 40%,
+    rgba(255,255,255,0.25) 50%,
+    rgba(255,255,255,0.12) 60%,
+    transparent 100%);
+  background-size: 400% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
 }
