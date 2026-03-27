@@ -1,25 +1,32 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import HowItWorks from './components/HowItWorks';
-import ChurnPredictor from './components/ChurnPredictor';
-import FeatureEngineering from './components/FeatureEngineering';
-import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import About from './pages/About';
+import CaseStudies from './pages/CaseStudies';
+import Pricing from './pages/Pricing';
+import Documentation from './pages/Documentation';
+import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
       <main>
-        <Hero />
-        <HowItWorks />
-        <ChurnPredictor />
-        <FeatureEngineering />
-        <Dashboard />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/docs" element={<Documentation />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
       <Footer />
-    </>
+      <ScrollToTop />
+    </BrowserRouter>
   );
 }
 
