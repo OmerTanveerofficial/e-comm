@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Brain, Github, Linkedin, Mail, ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
@@ -17,24 +18,21 @@ export default function Footer() {
           <div className="footer__links">
             <div>
               <h4>Product</h4>
-              <a href="#how-it-works">How It Works <ArrowUpRight size={12} /></a>
-              <a href="#predictor">Churn Predictor <ArrowUpRight size={12} /></a>
-              <a href="#features">Feature Engineering <ArrowUpRight size={12} /></a>
-              <a href="#dashboard">Dashboard <ArrowUpRight size={12} /></a>
+              <Link to="/#how-it-works">How It Works <ArrowUpRight size={12} /></Link>
+              <Link to="/#predictor">Churn Predictor <ArrowUpRight size={12} /></Link>
+              <Link to="/#features">Feature Engineering <ArrowUpRight size={12} /></Link>
+              <Link to="/#dashboard">Dashboard <ArrowUpRight size={12} /></Link>
             </div>
             <div>
               <h4>Resources</h4>
-              <a href="#dashboard">Documentation <ArrowUpRight size={12} /></a>
-              <a href="#dashboard">API Reference <ArrowUpRight size={12} /></a>
-              <a href="#dashboard">Case Studies <ArrowUpRight size={12} /></a>
-              <a href="#dashboard">Research Papers <ArrowUpRight size={12} /></a>
+              <Link to="/docs">Documentation <ArrowUpRight size={12} /></Link>
+              <Link to="/case-studies">Case Studies <ArrowUpRight size={12} /></Link>
+              <Link to="/pricing">Pricing <ArrowUpRight size={12} /></Link>
             </div>
             <div>
               <h4>Company</h4>
-              <a href="#how-it-works">About Us <ArrowUpRight size={12} /></a>
-              <a href="#dashboard">Blog <ArrowUpRight size={12} /></a>
-              <a href="#dashboard">Careers <ArrowUpRight size={12} /></a>
-              <a href="#dashboard">Contact <ArrowUpRight size={12} /></a>
+              <Link to="/about">About Us <ArrowUpRight size={12} /></Link>
+              <Link to="/contact">Contact <ArrowUpRight size={12} /></Link>
             </div>
           </div>
         </div>
