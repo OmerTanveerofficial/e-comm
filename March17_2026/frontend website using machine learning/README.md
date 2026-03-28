@@ -1,16 +1,32 @@
-# React + Vite
+# ChurnSense — ML Customer Churn Prediction
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional React-based web application for customer churn prediction analysis using machine learning concepts.
 
-Currently, two official plugins are available:
+**Live Demo:** [https://churn-prediction-ml.vercel.app](https://churn-prediction-ml.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Interactive churn predictor with simulated ML model inference
+- Real-time gauge meter visualization for churn probability
+- Feature engineering breakdown with importance scores
+- Analytics dashboard with multiple chart types (Area, Bar, Pie, Radar)
+- Animated particle grid background with mouse interaction
+- Scroll-reveal animations and animated counters
+- Glassmorphism UI design with responsive layout
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- Vite 8
+- Recharts (data visualization)
+- Lucide React (icons)
+- CSS3 with custom properties
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
